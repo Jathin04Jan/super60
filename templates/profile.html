@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ student.name }}'s Profile</title>
+</head>
+<body>
+    <h1>{{ student.name }}'s Profile</h1>
+    <p><strong>Name:</strong> {{ student.name }}</p>
+    <p><strong>Age:</strong> {{ student.age }}</p>
+    <p><strong>Course:</strong> {{ student.course }}</p>
+    
+    <h2>Remarks</h2>
+    <form method="post" action="/profile/{{ student._id }}/remarks">
+        <textarea name="remarks" rows="5" cols="50">{{ student.remarks }}</textarea><br>
+        <button type="submit">Save remarks</button>
+    </form>
+    
+    <a href="/">Back to Home</a>
+</body>
+</html>

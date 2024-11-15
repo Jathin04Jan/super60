@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super60 students</title>
+</head>
+<body>
+    <h1>Super69 stds</h1>
+    <form action="/search" method="GET">
+        <input type="text" name= "name" placeholder="Search by name">
+        <button type="submit">Search</button>
+    </form>
+    <ul>
+        {% for student in students %}
+            <li>
+                <a href="/profile/{{ student._id }}">Name: {{student.name}}, Age: {{student.age}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
