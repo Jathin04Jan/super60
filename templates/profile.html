@@ -16,6 +16,11 @@
         <textarea name="remarks" rows="5" cols="50">{{ student.remarks }}</textarea><br>
         <button type="submit">Save remarks</button>
     </form>
+
+    <!-- Button to redirect to the edit page -->
+    <form method="GET" action="/profile/{{ student._id }}/edit">
+        <button type="submit">Edit</button>
+    </form>
     
     <a href="/">Back to Home</a>
 </body>

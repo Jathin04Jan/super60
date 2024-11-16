@@ -7,10 +7,19 @@
 </head>
 <body>
     <h1>Super69 stds</h1>
+
+    <!-- Search Bar -->
     <form action="/search" method="GET">
         <input type="text" name= "name" placeholder="Search by name">
         <button type="submit">Search</button>
     </form>
+
+    <!-- Adding New student button -->
+     <form method="GET" action="/add-student">
+        <button type="submit">Add new student</button>
+     </form>
+
+    <!-- Student list -->
     <ul>
         {% for student in students %}
             <li>

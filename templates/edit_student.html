@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit {{ student.name }}'s Profile</title>
+</head>
+<body>
+    <h1>Edit {{ student.name }}'s Profile</h1>
+    <form method="POST" action="/profile/{{ student._id }}/edit">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" value="{{ student.name }}" required><br><br>
+
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" value="{{ student.age }}" required><br><br>
+
+        <label for="course">Course:</label><br>
+        <input type="text" id="course" name="course" value="{{ student.course }}" required><br><br>
+
+        <label for="remarks">Remarks:</label><br>
+        <textarea id="remarks" name="remarks" rows="5" cols="50">{{ student.remarks }}</textarea><br><br>
+
+        <button type="submit">Save Changes</button>
+    </form>
+    <a href="/profile/{{ student._id }}">Cancel</a>
+</body>
+</html>
